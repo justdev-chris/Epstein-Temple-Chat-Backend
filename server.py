@@ -56,7 +56,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 "id": str(uuid4()),
                 "user": data.get("user", "Anon"),
                 "text": data.get("text", ""),
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now().isoformat() + "Z"
             }
             
             # Broadcast to everyone (including sender)
